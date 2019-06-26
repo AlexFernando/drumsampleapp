@@ -8,7 +8,8 @@ class App extends Component {
 
 
   state = { 
-    sounds : []
+    sounds : [],
+    mydrumtype : 'Press a key'
   }
 
   componentDidMount() {
@@ -17,6 +18,13 @@ class App extends Component {
     })
   }
 
+  updateDrumType = (drumName) => {
+    this.setState({
+      mydrumtype: drumName
+    })
+  }  
+
+
   render() { 
     return (  
       
@@ -24,8 +32,11 @@ class App extends Component {
         <h1 className="title">
           FCC Drum Machine
         </h1>
+            
        <Container 
         sounds = {this.state.sounds}
+        mydrumtype = {this.state.mydrumtype}
+        updateDrumType={this.updateDrumType}
       />
       </div>
      

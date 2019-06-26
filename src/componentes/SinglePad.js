@@ -5,13 +5,15 @@ import './SinglePad.css'
 const SinglePad = (props) => {
     
     const {drumType, keyLetter, url} = props.info;
-
+    
     const playPad = (e) => {
         const sound = document.getElementById(keyLetter);
         sound.currentTime = 0;
         sound.play();
+        props.updateDrumType(drumType);
     }
 
+    
     return ( 
     
         <div className="drum-pad" id={drumType} onClick={playPad} >
