@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Paddrum from './Paddrum';
-
+import './Container.css';
 
 class Container extends Component {
 
     render() { 
         return ( 
-            <div>
-                <h1>
-                    Desde container 
-                </h1>
+            <div className="container">
+                 <h2 className="label">
+                    Press a key
+                </h2>
                 <Paddrum 
                     sounds = {this.props.sounds}
                 />

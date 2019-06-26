@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import './App.css';
+import React, { Component } from 'react';
 import Container from  './componentes/Container';
 import soundObject from './data/data.json';
+import './App.css';
+
 
 class App extends Component {
 
@@ -18,9 +19,16 @@ class App extends Component {
 
   render() { 
     return (  
-      <Container
+      
+      <div className="fullscreenDiv">
+        <h1 className="title">
+          FCC Drum Machine
+        </h1>
+       <Container 
         sounds = {this.state.sounds}
       />
+      </div>
+     
     );
   }
 }
