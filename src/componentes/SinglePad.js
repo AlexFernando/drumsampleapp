@@ -1,29 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './SinglePad.css'
 
 
-const SinglePad = (props) => {
+class SinglePad extends Component{
     
-    const {drumType, keyLetter, url} = props.info;
-    
-    const playPad = (e) => {
-        const sound = document.getElementById(keyLetter);
+
+    playPad = (e) => {
+        const sound = document.getElementById(this.props.info.keyLetter);
         sound.currentTime = 0;
         sound.play();
-        props.updateDrumType(drumType);
+        this.props.updateDrumType(this.props.info.drumType);
     }
 
+    keyboardPress = (e) => {
+        if(e.key.toUpperCase() === this.props.info.keyLetter) {
+            this.playPad();
+        }
+    }
+
+    componentDidMount() {
+        document.addEventListener('keydown', this.keyboardPress);
+    }
+      
+    componentWillUnmount() {
+        document.removeEventListener('keydown', this.keyboardPress);
+    }
+      
+
+
+
+
+    render () {
+        const {drumType, keyLetter, url} = this.props.info;
     
-    return ( 
+        return ( 
     
-        <div className="drum-pad" id={drumType} onClick={playPad} >
-                        <p>{keyLetter}</p>
-            <audio
-                id = {keyLetter}  
-                src = {url}  
-            />
-        </div>
-     );
+            <div className="drum-pad" id={drumType} onClick={this.playPad}>
+                                <p>{keyLetter}</p>
+                    <audio
+                        id = {keyLetter}  
+                        src = {url}  
+                    />
+                </div>
+             );
+    }
 }
  
 export default SinglePad;
