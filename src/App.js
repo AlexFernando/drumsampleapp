@@ -9,7 +9,8 @@ class App extends Component {
 
   state = { 
     sounds : [],
-    mydrumtype : 'Press a key'
+    mydrumtype : 'Press a key',
+    switch : true
   }
 
   componentDidMount() {
@@ -24,10 +25,16 @@ class App extends Component {
     })
   }  
   
+  switchPower = () => {
+    this.setState({
+      switch: !this.state.switch
+    })
+  }
 
   render() { 
+    
     return (  
-      
+
       <div className="fullscreenDiv">
         <h1 className="title">
           FCC Drum Machine
@@ -37,6 +44,8 @@ class App extends Component {
         sounds = {this.state.sounds}
         mydrumtype = {this.state.mydrumtype}
         updateDrumType={this.updateDrumType}
+        switchPower = {this.switchPower}
+        switchState = {this.state.switch}
       />
       </div>
      
