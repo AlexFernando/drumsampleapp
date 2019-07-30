@@ -34,10 +34,10 @@ class SinglePad extends Component{
         const {drumType, keyLetter, url} = this.props.info;
     
         return ( 
-    
+
             <div className="drum-pad" id={drumType} onClick={this.playPad}>
                                 <p>{keyLetter}</p>
-                    <audio
+                    <audio muted={`${this.props.switchState ? "" : "muted"}`}
                         id = {keyLetter}  
                         src = {url}  
                     />

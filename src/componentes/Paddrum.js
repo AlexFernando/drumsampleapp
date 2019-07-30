@@ -8,6 +8,7 @@ class Paddrum extends Component {
         return ( 
            
             <div className="mydrumpad">
+                            <h2 className="label">{this.props.mydrumtype}</h2>
                 <ul className="singlepad">
                     {
                         Object.keys(this.props.sounds).map(sound => (
@@ -16,9 +17,11 @@ class Paddrum extends Component {
                                 info = {this.props.sounds[sound]}
                                 key = {sound}
                                 updateDrumType={this.props.updateDrumType}
+                                switchState = {this.props.switchState}
                             />   
                         ))
                     }
+
                 </ul>
             </div>
          );
