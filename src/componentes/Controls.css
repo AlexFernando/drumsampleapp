@@ -1,0 +1,56 @@
+
+.control {
+    width: 100px;
+    margin: auto;
+}
+
+.control p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: .4rem;
+    font-family: monospace;
+}
+
+.control .select {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    border: 1px solid black;
+    width: 50px;
+    height: 20px;
+    padding: 1px;
+    background-color: black;
+}
+
+
+.control .select.flex-start {
+    justify-content: flex-start;
+}
+
+
+.control .select .inner {
+    width: 23px;
+    height: 19px;
+    background: red;
+    border: 1px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.control .select .inner:before {
+    content: "ON";
+    font-size: .6rem;
+    font-weight: bold;
+}
+
+.control .select .inner.text {
+    background: blue;
+}
+
+.control .select .inner.text:before {
+    content: "OFF";
+    font-size: .6rem;
+    font-weight: bold;
+}
