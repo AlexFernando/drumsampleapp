@@ -1,11 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Controls.css';
 
 class Controls extends Component {
-    state = {  }
+
+    
     render() { 
+        console.log(this.props.switchState, " ", this.props.switchPower );
         return ( 
-          <div>
-              <button onClick={this.props.switchPower} >Power</button>
+          <div className="control">
+              <p>Power</p>
+              <div className={"select " + (this.props.switchState ? "" : "flex-start")}>
+                <button className= {"inner " + (this.props.switchState ? "" : "text")}  onClick={this.props.switchPower} ></button>
+              </div>
           </div>  
         );
     }

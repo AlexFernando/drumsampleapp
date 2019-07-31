@@ -17,6 +17,7 @@ class Container extends Component {
                 />
                 <Controls
                     switchPower = {this.props.switchPower}
+                    switchState = {this.props.switchState}
                 />
             </div>
          );
