@@ -3,14 +3,14 @@ import Container from  './componentes/Container';
 import soundObject from './data/data.json';
 import './App.css';
 
-
 class App extends Component {
 
 
   state = { 
     sounds : [],
     mydrumtype : 'Press a key',
-    switch : true
+    switch : true,
+    volume: 50
   }
 
   componentDidMount() {
@@ -46,7 +46,10 @@ class App extends Component {
         updateDrumType={this.updateDrumType}
         switchPower = {this.switchPower}
         switchState = {this.state.switch}
+        volumen = {this.state.volume}
       />
+
+
       </div>
      
     );
