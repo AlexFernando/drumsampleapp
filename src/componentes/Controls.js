@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Controls.css';
+import Volume from './Volume';
+
 
 class Controls extends Component {
 
@@ -12,7 +14,9 @@ class Controls extends Component {
               <div className={"select " + (this.props.switchState ? "" : "flex-start")}>
                 <button className= {"inner " + (this.props.switchState ? "" : "text")}  onClick={this.props.switchPower} ></button>
               </div>
+              <Volume />
           </div>  
+            
         );
     }
 }

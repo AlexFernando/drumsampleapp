@@ -1,6 +1,6 @@
 
 .control {
-    width: 100px;
+    flex: 1 0 40%;
     margin: auto;
 }
 
@@ -9,6 +9,7 @@
     font-weight: 600;
     margin-bottom: .4rem;
     font-family: monospace;
+    text-align: center;
 }
 
 .control .select {
@@ -53,4 +54,23 @@
     content: "OFF";
     font-size: .6rem;
     font-weight: bold;
+}
+
+[type=range] {
+    -webkit-appearance: none;
+    margin: 12.5px 0;
+    width: 100%;
+}
+
+input[type="range" i] {
+    color: rgb(157, 150, 142);
+}
+
+input[type="range" i] {
+    -webkit-appearance: slider-horizontal;
+    color: rgb(144, 144, 144);
+    cursor: default;
+    padding: initial;
+    border: initial;
+    margin: 2px;
 }

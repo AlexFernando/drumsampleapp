@@ -3,7 +3,6 @@ import Paddrum from './Paddrum';
 import Controls from './Controls';
 import './Container.css';
 
-
 class Container extends Component {
 
     render() { 
