@@ -5,7 +5,6 @@ import './App.css';
 
 class App extends Component {
 
-
   state = { 
     sounds : [],
     mydrumtype : 'Press a key',
@@ -31,8 +30,15 @@ class App extends Component {
     })
   }
 
+  setVolume = (newVolume) => {
+    this.setState({
+      volume: newVolume
+    })
+  }
+
+
   render() { 
-    
+
     return (  
 
       <div className="fullscreenDiv">
@@ -46,10 +52,9 @@ class App extends Component {
         updateDrumType={this.updateDrumType}
         switchPower = {this.switchPower}
         switchState = {this.state.switch}
-        volumen = {this.state.volume}
+        volume = {this.state.volume}
+        volumeFoo = {this.setVolume}
       />
-
-
       </div>
      
     );

@@ -7,6 +7,7 @@ class SinglePad extends Component{
 
     playPad = (e) => {
         const sound = document.getElementById(this.props.info.keyLetter);
+        sound.volume = this.props.volume / 100;
         sound.currentTime = 0;
         sound.play();
         this.props.updateDrumType(this.props.info.drumType);
@@ -26,9 +27,6 @@ class SinglePad extends Component{
         document.removeEventListener('keydown', this.keyboardPress);
     }
       
-
-
-
 
     render () {
         const {drumType, keyLetter, url} = this.props.info;
