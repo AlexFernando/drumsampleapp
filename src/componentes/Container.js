@@ -13,10 +13,13 @@ class Container extends Component {
                     sounds = {this.props.sounds}
                     updateDrumType={this.props.updateDrumType}
                     switchState = {this.props.switchState}
+                    volume = {this.props.volume}
                 />
                 <Controls
                     switchPower = {this.props.switchPower}
                     switchState = {this.props.switchState}
+                    volume = {this.props.volume}
+                    volumeFoo = {this.props.volumeFoo}
                 />
             </div>
          );

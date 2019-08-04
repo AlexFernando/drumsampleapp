@@ -1,9 +1,12 @@
 import React from 'react';
 import './Volume.css';
 
-const Volume = () => {
+
+const Volume = (props) => {
+
+    
     return ( 
-        <div class="volume-div">
+        <div className="volume-div">
             <input
                 className="volume"
                 type="range"
@@ -11,6 +14,7 @@ const Volume = () => {
                 name="volume"
                 min="0"
                 max="100"
+                onInput = {props.volumeFoo}
             />
     </div>
 

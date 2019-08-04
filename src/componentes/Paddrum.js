@@ -18,6 +18,7 @@ class Paddrum extends Component {
                                 key = {sound}
                                 updateDrumType={this.props.updateDrumType}
                                 switchState = {this.props.switchState}
+                                volume = {this.props.volume}
                             />   
                         ))
                     }
