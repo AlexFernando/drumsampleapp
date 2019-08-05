@@ -8,8 +8,15 @@
     font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: .4rem;
+    margin-top: 0;
     font-family: monospace;
     text-align: center;
+}
+
+@media(min-width: 768px) {
+    .control p {
+        margin-top: 4rem;
+    }
 }
 
 .control .select {
