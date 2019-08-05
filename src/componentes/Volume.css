@@ -26,5 +26,5 @@
 
 .volume-div .volume::-webkit-slider-thumb:hover {
     cursor: grab;
-    background-color: rgb(131, 125, 125);
+    background-color: rgb(51, 45, 45);
   }
